@@ -1,0 +1,200 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f1f5f9;
+    color: #1e293b;
+}
+
+header {
+    background: #12304a;
+    color: white;
+    text-align: center;
+    padding: 22px 12px;
+}
+
+header h1 {
+    margin: 0 0 8px;
+}
+
+header p {
+    margin: 0;
+    color: #dbeafe;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    gap: 22px;
+    padding: 24px;
+    max-width: 1300px;
+    margin: auto;
+}
+
+.panel, .workspace {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px #0000000d;
+}
+
+h2 {
+    margin-top: 0;
+    font-size: 20px;
+}
+
+label {
+    display: block;
+    margin: 16px 0 7px;
+    font-weight: bold;
+}
+
+select, button {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #cbd5e1;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+button {
+    background: #2563eb;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background: #1d4ed8;
+}
+
+#clearObstacles {
+    background: #64748b;
+}
+
+#toggleSim {
+    background: #0f766e;
+}
+
+#status {
+    background: #eff6ff;
+    padding: 12px;
+    border-radius: 6px;
+    line-height: 1.5;
+    font-size: 14px;
+}
+
+.legend {
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+.legend p {
+    margin: 8px 0;
+}
+
+#warehouse {
+    display: grid;
+    grid-template-columns: repeat(20, minmax(12px, 1fr));
+    gap: 3px;
+    background: #dbe4ee;
+    padding: 6px;
+    border-radius: 8px;
+}
+
+.cell {
+    aspect-ratio: 1;
+    background: #f8fafc;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.cell.shelf {
+    background: #334155;
+}
+
+.cell.path {
+    background: #facc15;
+}
+
+.cell.start {
+    background: #22c55e;
+}
+
+.cell.goal {
+    background: #ef4444;
+}
+
+.cell.robot {
+    background: #38bdf8;
+    outline: 2px solid #075985;
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.stats div {
+    padding: 14px;
+    border-radius: 8px;
+    background: #f1f5f9;
+    text-align: center;
+}
+
+.stats span, .stats strong {
+    display: block;
+}
+
+.stats span {
+    font-size: 13px;
+    color: #64748b;
+    margin-bottom: 6px;
+}
+
+.stats strong {
+    font-size: 20px;
+}
+
+.hint {
+    color: #64748b;
+    font-size: 13px;
+}
+
+footer {
+    text-align: center;
+    padding: 16px;
+    color: #64748b;
+}
+
+@media (max-width: 750px) {
+    main {
+        grid-template-columns: 1fr;
+        padding: 12px;
+    }
+
+    #warehouse {
+        gap: 2px;
+        padding: 3px;
+    }
+
+    .cell {
+        min-width: 0;
+    }
+
+    .stats {
+        gap: 6px;
+    }
+
+    .stats div {
+        padding: 10px 4px;
+    }
+}
