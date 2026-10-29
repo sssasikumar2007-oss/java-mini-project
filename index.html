@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warehouse Robot Path Planning</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Warehouse Robot Path Planning</h1>
+        <p>Autonomous Navigation and Obstacle Avoidance</p>
+    </header>
+
+    <main>
+        <section class="panel">
+            <h2>Robot Controls</h2>
+
+            <label for="robot">Select Robot</label>
+            <select id="robot">
+                <option value="0">Robot 1</option>
+                <option value="1">Robot 2</option>
+                <option value="2">Robot 3</option>
+            </select>
+
+            <label for="goal">Destination</label>
+            <select id="goal">
+                <option value="drop">Drop Station</option>
+                <option value="pick">Pick Station</option>
+                <option value="charge">Charging Dock</option>
+            </select>
+
+            <button id="findPath">Find Path</button>
+            <button id="addObstacle">Add Obstacle</button>
+            <button id="clearObstacles">Clear Obstacles</button>
+            <button id="toggleSim">Pause Simulation</button>
+
+            <p id="status">Ready to plan a route.</p>
+
+            <div class="legend">
+                <p>🟦 Robot</p>
+                <p>⬛ Shelf / Obstacle</p>
+                <p>🟩 Start</p>
+                <p>🟥 Destination</p>
+                <p>🟨 Planned Path</p>
+            </div>
+        </section>
+
+        <section class="workspace">
+            <h2>Warehouse Map</h2>
+            <div id="warehouse" aria-label="Warehouse grid"></div>
+
+            <div class="stats">
+                <div>
+                    <span>Robots</span>
+                    <strong id="robotCount">3</strong>
+                </div>
+                <div>
+                    <span>Path Length</span>
+                    <strong id="pathLength">0</strong>
+                </div>
+                <div>
+                    <span>Simulation</span>
+                    <strong id="simStatus">Running</strong>
+                </div>
+            </div>
+            <p class="hint">Click an empty grid cell to add or remove an obstacle.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Autonomous Warehouse Navigation Project</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
